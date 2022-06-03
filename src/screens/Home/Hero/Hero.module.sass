@@ -1,0 +1,205 @@
+@import ../../../styles/helpers
+
+.hero
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 880px
+    padding: 34px 0 130px
+    +x
+        min-height: 800px
+    +d
+        min-height: 624px
+    +m
+        min-height: auto
+        padding: 64px 0 152px
+
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 450px
+    +t
+        max-width: 340px
+    +m
+        max-width: 100%
+        margin-bottom: 80px
+
+.title
+    margin-bottom: 20px
+
+.text
+    margin-bottom: 40px
+    color: $neutrals4
+
+.btns
+    display: flex
+    +m
+        display: block
+
+.button
+    +m
+        width: 100%
+    &:not(:last-child)
+        margin-right: 16px
+        +m
+            margin: 0 0 16px
+
+.scroll
+    position: absolute
+    bottom: 96px
+    +d
+        bottom: 48px
+    +m
+        bottom: 64px
+
+.gallery
+    position: absolute
+    top: 50%
+    right: calc(50% - 465px)
+    width: 512px
+    transform: translateY(-58%)
+    pointer-events: none
+    +x
+        right: calc(50% - 425px)
+        width: 450px
+    +d
+        right: calc(50% - 365px)
+        width: 320px
+    +t
+        right: calc(50% - 300px)
+    +m
+        position: relative
+        top: auto
+        right: auto
+        left: -16px
+        margin: 0 auto
+        transform: translate(0,0)
+        pointer-events: all
+
+.preview
+    &:first-child
+        position: relative
+        z-index: 2
+    &:nth-child(2)
+        top: 36%
+        right: -18%
+        z-index: 3
+        width: 45%
+    &:nth-child(3)
+        top: -12%
+        right: -7%
+        z-index: 1
+        width: 45%
+    &:nth-child(4)
+        left: 11%
+        bottom: 13%
+        z-index: 3
+        width: 18%
+    &:not(:first-child)
+        position: absolute
+    img
+        width: 100%
+
+.pulse
+    min-width: 10px
+    min-height: 10px
+    max-width: 10px
+    max-height: 10px
+    border-radius: 50%
+    margin-right: 10px
+    box-shadow: 0px 0px 1px 1px #0000001a
+    animation: pulse-animation 2s infinite
+    background: #86FFC6
+
+@keyframes pulse-animation
+    0%
+        box-shadow: 0 0 0 0px rgba(134, 255, 198, 0.10)
+
+    100%
+        box-shadow: 0 0 0 6px rgba(134, 255, 198, 0.23)
+
+.timerContainer
+    height: auto
+    position: relative
+    margin-top: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 20px
+    color: #23262f
+    +dark
+        color: #FCFCFD
+    +x
+        width: 550px
+    +d
+        width: 470px
+    +m
+        width: auto
+        flex-direction: column
+        gap: 15px
+    +s
+        width: auto
+
+.timerHelper
+    font-size: 14.99px
+    white-space: nowrap
+    font-weight: 600
+    align-items: center
+    display: flex
+    line-height: 20px
+
+.countdownContainer
+    box-sizing: border-box
+    padding: 11px 18px
+    border-radius: 18.3537px
+    font-style: normal
+    font-weight: 600
+    font-size: 26.3835px
+    line-height: 33px
+    display: flex
+    gap: 10px
+    
+    +x
+        padding: 10px 15px
+        gap: 5px
+        line-height: 20px
+    // +d
+    //     font-size: 12.3835px
+    //     padding: 7px 10px
+    // +s
+    //     font-size: 12.3835px
+    //     padding: 5px 10px
+    //     margin-left: 10.77px
+    //     line-height: 15px
+    //     gap: 3px
+    p
+        display: flex
+        flex-direction: column
+        text-align: center
+
+.timerOption
+    span
+        &:first-child
+            font-weight: 600
+            font-size: 22.3835px
+            +x
+                font-size: 20.3835px
+                line-height: 20px
+            // +d
+            //     font-size: 15.3835px
+            //     line-height: 15px
+            // +s
+            //     font-size: 10.3835px
+            //     line-height: 10px
+        &:nth-child(2)
+            font-style: normal
+            font-weight: 400
+            font-size: 9.09775px
+            line-height: 11px
+            // +d
+            //     font-weight: normal
+            //     font-size: 8.3835px
+            //     line-height: 7px
+            // +s
+            //     font-size: 6.3835px
+            //     line-height: 7px
